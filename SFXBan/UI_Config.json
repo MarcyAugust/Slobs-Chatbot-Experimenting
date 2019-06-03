@@ -14,6 +14,13 @@
       "tooltip": "The reason why someone was banned. (Format: '[username] was banned for...')",
       "group": "Core"
     },
+	"UseReason": {
+      "type": "checkbox",
+      "value": false,
+      "label": "Display Reason Message",
+      "tooltip": "Check the box to enable the reason message.",
+      "group": "Core"
+	},
     "Permission": {
       "type": "dropdown",
       "value": "moderator",

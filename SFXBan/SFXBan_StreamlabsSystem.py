@@ -51,7 +51,8 @@ def Execute(data):
     if data.IsChatMessage() and data.GetParam(0).lower() == ScriptSettings.Command and Parent.HasPermission(data.User,ScriptSettings.Permission,ScriptSettings.Info):
         if data.GetParamCount() == 2:
             Parent.SendStreamMessage("/ban " + data.GetParam(1))    # Bans the user
-            Parent.SendStreamMessage(data.GetParam(1) + " was banned for " + ScriptSettings.Reason) # Posts the ban in chat
+            if ScriptSettings.UseReason == True:
+                Parent.SendStreamMessage(data.GetParam(1) + " was banned for " + ScriptSettings.Reason) # Posts the ban in chat
             sfxdirectory = os.path.join(os.path.dirname(__file__), "SFX")
             Parent.PlaySound(sfxdirectory + "/" + ScriptSettings.File, ScriptSettings.Volume)   # Plays the SFX
         else:
