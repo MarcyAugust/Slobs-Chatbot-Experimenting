@@ -1,0 +1,57 @@
+{
+    "output_file": "Settings/settings.json",
+    "Command": {
+      "type": "textbox",
+      "value": "!sfxban",
+      "label": "Command",
+      "tooltip": "The command used to ban someone.",
+      "group": "Core"
+    },
+    "Reason": {
+      "type": "textbox",
+      "value": "for being a jerk!",
+      "label": "Reason",
+      "tooltip": "The reason why someone was banned. (Format: '[username] was banned for...')",
+      "group": "Core"
+    },
+    "Permission": {
+      "type": "dropdown",
+      "value": "moderator",
+      "items": ["everyone","moderator","subscriber","editor","user_specific"],
+      "label": "Permission",
+      "tooltip": "What group of people (and above) are able to use the command",
+      "group": "Core"
+    },
+    "Info": {
+      "type": "textbox",
+      "value": "",
+      "label": "Info",
+      "tooltip": "This should only be used if you are using user_specific permissions.",
+      "group": "Core"
+	},
+    "Volume": {
+        "type": "slider",
+        "value": 50.0,
+        "min": 1.0,
+        "max": 100.0,
+        "ticks": 1.0,
+        "label": "Volume",
+        "tooltip": "Sets the volume for the sound effect.",
+        "group": "Core"
+	},
+    "File": {
+        "type": "textbox",
+        "value": "terf.mp3",
+        "label": "SFX file (Include .mp3)",
+        "tooltip": "The sound effect to be played when banning someone.",
+        "group": "Core"
+      },
+    "SFX Directory": {
+      "type": "button",
+      "label": "Open the SFX directory",
+      "tooltip": "Opens the SFX directory so you can add your own sound effects.",
+	  "function": "OpenSFXDir",
+	  "wsevent": "",
+      "group": "Core"
+	}
+  }
